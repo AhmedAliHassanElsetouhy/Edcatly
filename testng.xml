@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test">
+        <classes>
+            <class name="testCases.DashboardTCs" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+name: Run Test Project.
+on:
+   push:
+       branches: ["master]
+
+jobs:
+    test:
+        runs-on: macos-latest
+        steps:
+          - uses: actions/checkout@v3 → uses because i use something that other user make it.
+          - uses: actions/setup-java@v3
+            with:
+              java-version: “11”
+              distribution: ‘temurin’
+              cache: maven
+          - uses: browser-actions/setup-chrome@latest
+          - run: mvn clean test
